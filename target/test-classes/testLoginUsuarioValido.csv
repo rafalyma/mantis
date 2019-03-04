@@ -1,0 +1,7 @@
+testLoginUsuarioValido,login,senha,mensagem,Duration(ms)
+"",rafael.maia,anacondyas,Logged in as: rafael.maia (Rafael Maia - manager),2200.0
+"",rafael.maia,senhaFalsa,Your account may be disabled or blocked or the username/password you entered is incorrect.,6260.0
+"",rafael.maia,,Your account may be disabled or blocked or the username/password you entered is incorrect.,6235.0
+"",rafael.maia,,Your account may be disabled or blocked or the username/password you entered is incorrect.,6213.0
+"",,,Your account may be disabled or blocked or the username/password you entered is incorrect.,6084.0
+"",,anacondyas,Your account may be disabled or blocked or the username/password you entered is incorrect.,6273.0
