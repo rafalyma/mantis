@@ -33,7 +33,6 @@ public class AlterarDadosUsuario {
         //método criarNavegadorChrome para testar no google Chrome ou trocar para método criarNavegadorFirefox para
         // testar no Firefox
         navegador= Web.criarNavegadorChrome();
-        navegador.manage().window().maximize();
         new LoginFormPage(navegador).fazerLogin("rafael.maia","anacondyas");
         new MyView(navegador).clicarMyAccount();
     }

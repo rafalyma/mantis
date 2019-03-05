@@ -34,7 +34,7 @@ public class TestePaginaInicial {
         //método criarNavegadorChrome para testar no google Chrome ou trocar para método criarNavegadorFirefox para
         // testar no Firefox
         navegador=Web.criarNavegadorChrome();
-        navegador.manage().window().maximize();
+
     }
     @Test
     public void checaTituloPaginaInicial(){
@@ -59,8 +59,9 @@ public class TestePaginaInicial {
     }
 
     @Test
-    public void testeLogout(){
+    public void testLogout(){
         new LoginFormPage(navegador).fazerLogin("rafael.maia","anacondyas").clicarLogout();
+
         assertEquals(navegador.getCurrentUrl(),"http://mantis-prova.base2.com.br/login_page.php");
 
     }

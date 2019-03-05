@@ -13,8 +13,9 @@ public class Web {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\eliana\\Desktop\\selenium\\chromedriver_win32\\chromedriver.exe");
         WebDriver navegador = new ChromeDriver();
         navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        navegador.manage().window().maximize();
 
-        // Navegando para a página do Taskit!
+        // Navegando para a página do Mantis!
         navegador.get("http://mantis-prova.base2.com.br/");
 
         return navegador;

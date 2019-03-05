@@ -50,6 +50,7 @@ public class FormReportIssue2 extends BasePage{
         navegador.findElement(By.className("button")).click();
         return this;
     }
+
     public FormReportIssue2 submitReport(String categoria,
                                          String profile,
                                          String assignto,
@@ -70,4 +71,5 @@ public class FormReportIssue2 extends BasePage{
         return this;
 
     }
+
 }

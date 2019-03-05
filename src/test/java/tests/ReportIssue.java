@@ -32,7 +32,6 @@ public class ReportIssue {
         //método criarNavegadorChrome para testar no google Chrome ou trocar para método criarNavegadorFirefox para
         // testar no Firefox
         navegador= Web.criarNavegadorChrome();
-        navegador.manage().window().maximize();
         new LoginFormPage(navegador).fazerLogin("rafael.maia","anacondyas").clicarReportIssue();
     }
     @Test
@@ -41,6 +40,32 @@ public class ReportIssue {
         urlAcessada=navegador.getTitle();
         assertEquals("Select Project - MantisBT",urlAcessada);
     }
+    //testar se os campos Priority, Severity e Reproducibility são preenchidos com os valores Default (padrões) na tela.
+    @Test
+    public void testDefaultValuePriority() {
+        String retornaDefaultPriority = new MyView(navegador)
+                .clicarReportIssue()
+                .selecionarProjeto()
+                .capturarValorDefaultPriority();
+        assertEquals("normal", retornaDefaultPriority);
+    }
+    @Test
+    public void testDefaultValueSeverity() {
+        String retornaDefaultSeverity = new MyView(navegador)
+                .clicarReportIssue()
+                .selecionarProjeto()
+                .capturarValorDefaultSeverity();
+        assertEquals("minor", retornaDefaultSeverity);
+    }
+    @Test
+    public void testDefaultValueReproducibility() {
+        String retornaDefaultReproducibility = new MyView(navegador)
+                .clicarReportIssue()
+                .selecionarProjeto()
+                .capturarValorDefaultReproducibility();
+        assertEquals("have not tried", retornaDefaultReproducibility);
+    }
+
     @Test
     // Atenção: este teste também valida se os reports estão sendo gravados em sequencial correto em sua chave primária no banco. Por isso, declare no arquivo data drive os próximos sequenciais também
     public void testReportIssue(
